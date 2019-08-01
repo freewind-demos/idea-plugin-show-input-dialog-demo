@@ -7,7 +7,8 @@ import com.intellij.openapi.ui.Messages
 class HelloAction : AnAction() {
 
     override fun actionPerformed(event: AnActionEvent) {
-        Messages.showInfoMessage("Hello from my plugin", "Hello")
+        val inputName = Messages.showInputDialog(event.project, "Input your name please", "Input dialog", null)
+        println("Input name: $inputName")
     }
 
 }
